@@ -1,0 +1,15 @@
+<div class="main-div">
+
+  <div class="todo-div">
+    <h1>{{title}}</h1>
+    <input type="text" name="" #task class="inp" placeholder="Add some text" maxlength="25">
+    <button class="btn" (click)="add(task.value)">Add in list</button>
+    <ul *ngFor="let item of list">
+
+      <li> {{item.name}} <button (click)="remove(item.id)" class="del">X</button></li>
+    </ul>
+
+    <p id="text">The filed is empty</p>
+    <p id="error"> There is too many elements in Todo</p>
+  </div>
+</div>
